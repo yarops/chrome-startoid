@@ -12,9 +12,33 @@
     {
       "name": "AI",
       "links": [
-         {
+        {
+          "name": "ChatGPT",
+          "url": "https://chatgpt.com"
+        },
+        {
+          "name": "Gemini",
+          "url": "https://gemini.google.com/app"
+        },
+        {
           "name": "Qwen",
           "url": "https://chat.qwen.ai"
+        },
+        {
+          "name": "Deepseek",
+          "url": "https://chat.deepseek.com"
+        },
+        {
+          "name": "Perplexity",
+          "url": "https://www.perplexity.ai"
+        },
+        {
+          "name": "Scira",
+          "url": "https://scira.ai"
+        },
+        {
+          "name": "Kimi",
+          "url": "https://www.kimi.com"
         }
       ]
     },
@@ -24,15 +48,27 @@
         {
           "name": "Gmail",
           "url": "https://gmail.com"
+        },
+        {
+          "name": "Yandex",
+          "url": "https://ya.ru"
         }
       ]
     },
     {
-      "name": "Flash sites",
+      "name": "Tasks",
       "links": [
         {
-          "name": "Gmail",
-          "url": "https://gmail.com"
+          "name": "Weeek",
+          "url": "https://weeek.net/ru"
+        },
+        {
+          "name": "Otask",
+          "url": "https://otask.ru"
+        },
+        {
+          "name": "Clockify",
+          "url": "https://app.clockify.me"
         }
       ]
     }

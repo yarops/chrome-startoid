@@ -1,5 +1,5 @@
 .QuickLinks {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-  gap: 0.5rem;
+  /* Masonry layout via CSS columns for compact packing */
+  column-width: 200px; /* approximate card width */
+  column-gap: 0.5rem;
 }

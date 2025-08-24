@@ -26,29 +26,18 @@
   text-align: left;
   cursor: pointer;
   transition: transform 0.2s ease, background 0.2s ease;
-  color: inherit;
+  color: rgb(255 255 255 / 90%);
   display: flex;
   align-items: center;
   gap: 0.5rem;
   background: transparent;
-  border: 1px solid rgb(255 255 255 / 20%);
+  border: 0;
   border-radius: 12px;
-}
 
-.Item:hover {
-  background: rgba(255, 255, 255, 0.16);
-  transform: translateY(-2px);
-}
-
-.IconWrap {
-  width: 28px;
-  height: 28px;
-  border-radius: 6px;
-  overflow: hidden;
-  background: rgba(255,255,255,0.08);
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  &:hover {
+    background: rgba(255, 255, 255, 0.16);
+    transform: translateY(-2px);
+  }
 }
 
 .Label {

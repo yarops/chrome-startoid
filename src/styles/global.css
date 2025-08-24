@@ -33,6 +33,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+    grid-area: header;
 
   >div:last-child {
     flex: auto;
@@ -51,47 +52,4 @@ body {
   display: flex;
   flex-direction: column;
   gap: 20px;
-}
-
-/* Quick Links Styles */
-.quick-links h2 {
-  text-align: center;
-  margin-bottom: 30px;
-  font-weight: 300;
-  opacity: 0.9;
-}
-
-.links-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-  gap: 20px;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-  .container {
-    grid-template-areas: 
-      "header"
-      "main"
-      "sidebar";
-    grid-template-columns: 1fr;
-    gap: 20px;
-  }
-  
-  .time {
-    font-size: 2rem;
-  }
-  
-  .greeting {
-    font-size: 1.5rem;
-  }
-  
-  .links-grid {
-    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-    gap: 15px;
-  }
-  
-  .link-item {
-    padding: 15px;
-  }
 }

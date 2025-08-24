@@ -1,4 +1,5 @@
 import React, {useCallback, useMemo, useState} from 'react';
+import styles from './index.module.scss';
 
 // Comments are in English per your rule.
 // Icon component tries multiple favicon sources for a given URL with graceful fallback.
@@ -75,7 +76,7 @@ const Icon: React.FC<IconProps> = ({url, size = 32, className, style, alt}) => {
                 alt={alt || hostname}
                 width={size}
                 height={size}
-                className={className}
+                className={styles.Icon}
                 style={{
                     width: size,
                     height: size,
