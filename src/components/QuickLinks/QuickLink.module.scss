@@ -1,0 +1,23 @@
+.QuickLink {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.QuickLinkIcon {
+  font-size: 1rem;
+
+  img {
+    display: block;
+    height: 1rem;
+  }
+}
+
+.QuickLinkName {
+  font-size: 0.9rem;
+  opacity: 0.9;
+  text-transform: uppercase;
+  position: relative;
+  top: -1px;
+}

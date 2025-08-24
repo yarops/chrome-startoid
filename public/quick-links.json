@@ -1,10 +1,40 @@
-[
-  { "name": "Gmail", "url": "https://gmail.com" },
-  { "name": "GitHub", "url": "https://github.com" },
-  { "name": "Stack Overflow", "url": "https://stackoverflow.com" },
-  { "name": "Reddit", "url": "https://reddit.com" },
-  { "name": "Twitter", "url": "https://twitter.com" },
-  { "name": "LinkedIn", "url": "https://linkedin.com" },
-  { "name": "Netflix", "url": "https://netflix.com" },
-  { "name": "Qwen", "url": "https://chat.qwen.ai" }
-]
+{
+  "widgets": [
+    {
+      "name": "Tools",
+      "links": [
+        {
+          "name": "PMA",
+          "url": "https://pma/"
+        }
+      ]
+    },
+    {
+      "name": "AI",
+      "links": [
+         {
+          "name": "Qwen",
+          "url": "https://chat.qwen.ai"
+        }
+      ]
+    },
+    {
+      "name": "Google",
+      "links": [
+        {
+          "name": "Gmail",
+          "url": "https://gmail.com"
+        }
+      ]
+    },
+    {
+      "name": "Flash sites",
+      "links": [
+        {
+          "name": "Gmail",
+          "url": "https://gmail.com"
+        }
+      ]
+    }
+  ]
+}

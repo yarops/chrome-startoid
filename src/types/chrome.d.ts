@@ -29,6 +29,45 @@ declare namespace chrome {
             ): void;
         }
     }
+
+    // Minimal subset of chrome.management we need
+    namespace management {
+        type ExtensionType =
+            | 'extension'
+            | 'theme'
+            | 'packaged_app'
+            | 'hosted_app'
+            | 'legacy_packaged_app';
+
+        interface IconInfo {
+            size: number;
+            url: string;
+        }
+
+        interface ExtensionInfo {
+            id: string;
+            name: string;
+            description?: string;
+            enabled: boolean;
+            type: ExtensionType;
+            icons?: IconInfo[];
+            appLaunchUrl?: string; // for hosted apps
+            homepageUrl?: string;
+            optionsUrl?: string;
+        }
+
+        function getAll(callback: (results: ExtensionInfo[]) => void): void;
+        function launchApp(id: string, callback?: () => void): void;
+    }
+
+    // Minimal topSites API
+    namespace topSites {
+        interface MostVisitedURL {
+            url: string;
+            title: string;
+        }
+        function get(callback: (data: MostVisitedURL[]) => void): void;
+    }
 }
 
 // Глобальная декларация Chrome
