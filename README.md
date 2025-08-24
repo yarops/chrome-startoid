@@ -1,23 +1,22 @@
 # Chrome Startoid
 
-Кастомная стартовая страница для Chrome (New Tab) на React + Vite.
+Custom start page for Chrome (Vite + React).
 
-## Возможности
+## Features
 
-- 🕐 Реальные часы с датой
-- 🔍 Умная строка поиска: Google-поиск или прямой переход по URL/домену
-- 🔗 Быстрые ссылки (настраиваются в `public/quick-links.json`)
-- 🎨 Градиентный минималистичный дизайн
-- 📱 Адаптивная вёрстка
+- Smart search bar: Google search or direct navigation by URL/domain
+- Quick links (configured in `public/quick-links.json`)
+- Real-time clock (component `Clock`) with chrome userinfo.
+- Chrome Top Sites (component `TopSites`, requires `topSites` permission)
 
-## Требования
+## Requirements
 
-- Node.js — см. версию в `.nvmrc`
-- PNPM (рекомендуется) или NPM
+- Node.js — see version in `.nvmrc`
+- PNPM (recommended) or NPM
 
-## Быстрый старт
+## Quick Start
 
-### Установка зависимостей
+### Install dependencies
 
 PNPM:
 ```bash
@@ -29,7 +28,7 @@ NPM:
 npm install
 ```
 
-### Режим разработки
+### Development
 
 PNPM:
 ```bash
@@ -41,7 +40,7 @@ NPM:
 npm run dev
 ```
 
-### Сборка production
+### Build for production
 
 PNPM:
 ```bash
@@ -53,7 +52,7 @@ NPM:
 npm run build
 ```
 
-### Локальный предпросмотр собранной версии (опционально)
+### Local preview (optional)
 
 PNPM:
 ```bash
@@ -65,16 +64,16 @@ NPM:
 npm run preview
 ```
 
-## Установка в Chrome
+## Install in Chrome
 
-1. Соберите проект: `pnpm build` или `npm run build`.
-2. Откройте Chrome → перейдите в `chrome://extensions/`.
-3. Включите «Режим разработчика» (Developer mode).
-4. Нажмите «Загрузить распакованное» (Load unpacked).
-5. Укажите папку `dist` из этого проекта.
-6. Откройте новую вкладку — увидите стартовую страницу.
+1. Build the project: `pnpm build` or `npm run build`.
+2. Open Chrome → go to `chrome://extensions/`.
+3. Enable Developer mode.
+4. Click “Load unpacked”.
+5. Select the `dist` folder of this project.
+6. Open a new tab — you should see the start page.
 
-## Структура проекта
+## Project structure
 
 ```
 chrome-startoid/
@@ -87,8 +86,9 @@ chrome-startoid/
 │  ├─ components/
 │  │  ├─ Clock/
 │  │  ├─ Icon/
+│  │  ├─ QuickLinks/
 │  │  ├─ SearchBar/
-│  │  └─ QuickLinks.tsx
+│  │  └─ TopSites/
 │  ├─ styles/
 │  │  └─ global.css
 │  ├─ types/
@@ -105,31 +105,13 @@ chrome-startoid/
 └─ README.md
 ```
 
-## Кастомизация
-
-- **Быстрые ссылки**: отредактируйте `public/quick-links.json`.
-  Пример:
-  ```json
-  [
-    { "name": "GitHub", "url": "https://github.com", "icon": "github" },
-    { "name": "YouTube", "url": "https://youtube.com", "icon": "youtube" }
-  ]
-  ```
-  Поддерживаемые значения `icon` зависят от реализации компонента `Icon`.
-
-- **Поисковая строка**: компонент `SearchBar` умеет определять URL и выполнять прямой переход, иначе — поиск в Google.
-
-- **Стили и фон**: изменяйте градиенты и общий вид в `src/styles/global.css`.
-
-- **Иконка расширения**: замените файл `public/icons/icon.svg` и обновите пути/размеры в `public/manifest.json` при необходимости.
-
-## Технологии
+## Technologies
 
 - React 18 + TypeScript
 - Vite
-- CSS (в т.ч. CSS Modules)
+- CSS (including CSS Modules)
 - Chrome Extensions Manifest V3
 
-## Лицензия
+## License
 
 MIT
